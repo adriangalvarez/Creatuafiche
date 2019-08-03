@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layAsk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/txtVosAsk"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="¿Cómo te llamás?"
+                        android:inputType="text"
+                        android:paddingLeft="20sp"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textColorHint="#000"
+                        android:textSize="16sp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/txtProfesionAsk"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="¿A qué te dedicás?"
+                        android:inputType="text"
+                        android:paddingLeft="20sp"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textColorHint="#000"
+                        android:textSize="16sp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/btnCamera"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relAfiche"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layAfiche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgFinal"
+                    android:layout_width="0dp"
+                    android:layout_height="250dp"
+                    android:layout_weight="5"
+                    android:scaleType="centerCrop"
+                    android:padding="0dp"
+                    android:src="@drawable/alberto"/>
+
+                <ImageView
+                    android:id="@+id/imgImage"
+                    android:layout_width="0dp"
+                    android:layout_height="250dp"
+                    android:layout_weight="5"
+                    android:scaleType="centerCrop"
+                    android:padding="0dp"
+                    android:src="@drawable/vos"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtAlberto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/layAfiche"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:text="Alberto"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtFuturo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtAlberto"
+                android:layout_marginStart="10dp"
+                android:text="futuro"
+                android:textColor="#FFFFFF"
+                android:textSize="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtFuturo"
+                android:layout_marginStart="10dp"
+                android:text="presidente"
+                android:textColor="#FFFFFF"
+                android:textSize="10dp"
+                />
+
+            <TextView
+                android:id="@+id/txtVos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/txtAlberto"
+                android:layout_marginEnd="10dp"
+                android:text="Tu Nombre"
+                android:textAlignment="textEnd"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtProfesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtVos"
+                android:layout_marginEnd="10dp"
+                android:text="¿A qué te dedicás?"
+                android:textAlignment="textEnd"
+                android:textColor="#000000"
+                android:textSize="10dp"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/layAfiche"
+                android:src="@drawable/futuro"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/btnShare"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/btnReset"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
